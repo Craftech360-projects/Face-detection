@@ -1,0 +1,92 @@
+#layouts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.print{
+    cursor: pointer;
+    width: 5em;
+    height: 2.5em;
+    background-color: #F8C800;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 25px;
+    align-self: center;
+    position: absolute;
+    bottom: 13%;
+}
+
+#badge {
+    background-color: white;
+    width: 880px;
+    height: 1363px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#cftlogo{
+    z-index: 2;
+    position: absolute;
+    top: 7%;
+}
+
+#show{
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    left: 35%;
+    top: 35%;
+    background: #FFFFFF;
+    border: 2px solid #B55C22;
+    border-radius: 25px;
+}
+
+#logo{
+    position: absolute;
+    width: 300px;
+    height: 268.03px;
+    left: 20%;
+    top: 4%;
+}
+
+#Name {
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+#Company {
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+#rfidForm{
+    background-color: white;
+    width: 880px;
+    height: 652px;
+    border-radius: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#goback{
+    position: absolute;
+    bottom: 4%;
+    left: 36%;
+}
+
+#printer{
+    position: absolute;
+    bottom: 4%;
+    left: 58%;
+}

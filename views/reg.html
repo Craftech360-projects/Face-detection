@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../assets/css/reg.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <main id="main">
+        <!-- SCREEN 1 -->
+        <div id="container1">
+            <img src="../assets/images/bgs/Phone Screen 1.png" alt="">
+            <div id="next1" onclick="start()">Register Here</div>
+        </div>
+
+        <div id="container2"  style="display: none;">
+            <!-- <img id="captureScreen" width="390px" height="844px" src="../assets/images/bgs/PhoneScreen2.png" alt=""> -->
+            <div id="camera">
+                <!-- <div class="flash"> -->
+                    <video id="video"></video>
+                <!-- </div> -->
+                <canvas id="canvas" style="display: none;"></canvas>
+                <!-- <div id="layouts"> -->
+                    <div id="overStart">
+                        <div id="startbutton" ></div>
+                    </div>
+                    <!-- <div id="line1"> -->
+                        <div id="Retake" onclick="retake()">Retake</div>
+                    </div>
+                    <!-- <div id="line2"> -->
+                        <div id="next" onclick="regPage()">Submit</div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+
+        <div id="over" style="width: 100vw; height: 100vh;display: none;flex-direction: column;justify-content: center;align-items: center;">
+            <div id="Registration" style="display: flex;">
+                <div>
+                    <p id="register">REGISTER</p>
+                </div>
+                <div>
+                    <form onsubmit="handleSubmit();return false">
+                        <div class="input_wrap">
+                            <label for="fname">Full Name</label>
+                            <input required type="text" id="fname">
+                        </div>
+                        <div class="input_wrap">
+                            <label for="phone">Phone</label>
+                            <input required type="text" id="phone">
+                        </div>
+                        <div class="input_wrap">
+                            <label for="email">Email Id</label>
+                            <input required type="email" id="email1">
+                        </div>
+                        <div class="input_wrap">
+                            <label for="company">Company Name</label>
+                            <input required type="text" id="company">
+                        </div>
+                        <div class="input_wrap">
+                            <label for="city">City</label>
+                            <input required type="text" id="city">
+                        </div>
+                        <div class="submit" style="display: flex; flex-direction: column;">
+                            <input type="submit" value="Submit" id="submit_btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="showThanks" style="display: none;">
+            <img src="../assets/images/bgs/Phone Screen 4.png" alt="">
+        </div>
+    </main>
+
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+<script src="../assets/js/register.js"></script>
+</body>
+</html>

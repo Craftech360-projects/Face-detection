@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face Detection</title>
+ 
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <style>
+    body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  body{
+    background-image: url('../assets/images/bgs/Web\ screen\ 2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+canvas {
+  position: absolute;
+}
+
+video {
+  border-radius: 12px;
+  border: 5px solid #F8C800;
+}
+  </style>
+<link rel="stylesheet" href="../assets/css/styleIndex.css">
+</head>
+<body id="body">
+  <!-- <h1>hello</h1> -->
+  <video id="video" width="600" height="450" autoplay>
+  </video>
+  
+    <div id="PrintBadge" style="width: 100vw; height: 100vh;display: none;flex-direction: column;justify-content: center;align-items: center;">
+      <!-- <div id="badge"> -->
+          <div id="show">
+            <img id="logo" src="../assets/images/bgs/Ellipse 1.png" alt="">
+              <div style="margin-top: 17%; margin-left: 17%;">
+                  <p id="Name">Name:&nbsp;</p>
+                  <p id="Company">Company:&nbsp;</p>
+              </div>
+          </div>
+          <div id="layouts">
+              <button class="print" id="printer" onclick="downloadReceipt()">Print Badge</button>
+              <button class="print" id="goback" onclick="goBack()">Back</button>
+          </div>
+      <!-- </div> -->
+  </div>
+
+  <div id="showThanks" style="display: none;">
+    <img src="../assets/images/bgs/Web screen 4.png" alt="">
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+<script defer src="../assets/js/face-api.min.js"></script>
+<script defer src="../assets/js/single.js"></script>
+</body>
+</html>
